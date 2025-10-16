@@ -1,0 +1,97 @@
+:root{
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --accent:#2b6cb0;
+    --muted:#6b7280;
+}
+
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, Arial, sans-serif}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:#111827;
+    padding:20px;
+}
+
+header h1{
+    margin:0 0 12px 0;
+    color:var(--accent);
+}
+
+.controls{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:12px;
+}
+
+.controls input[type="text"]{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #d1d5db;
+    min-width:260px;
+    flex:1;
+}
+
+.controls button{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:10px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.controls button#btnLimpiar{
+    background:#6b7280;
+}
+
+.opciones{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.opciones label{
+    font-size:14px;
+    color:var(--muted);
+}
+
+.resultado{
+    background:var(--card);
+    border-radius:8px;
+    padding:12px;
+    box-shadow:0 1px 4px rgba(2,6,23,0.06);
+}
+
+#listaAlumnos{list-style:none;padding:0;margin:0}
+
+#listaAlumnos li{
+    padding:10px;
+    border-bottom:1px solid #eef2f7;
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+}
+
+#listaAlumnos li:last-child{border-bottom:none}
+
+#listaAlumnos li .meta{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* mensaje */
+#mensaje{
+    margin:8px 0;
+    color:var(--accent);
+}
+
+/* responsive */
+@media (max-width:600px){
+    .controls{flex-direction:column;align-items:stretch}
+    .opciones{justify-content:flex-start}
+}
+/* ...existing code... */
